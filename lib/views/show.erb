@@ -1,12 +1,21 @@
 <html>
   <head>
+  	  <style type="text/css">
+	   h1 {color: maroon }
+	   .Souligné{text-decoration: underline;}
+ 	   ></style>
+
     <title>PAGE POTIN</title>
   </head>
   <body>
- <p> Vous êtes sur la page du potin numéro <%= params['id'] %>. </p>
- <p> L'auteur est : <%= affichage_du_potin.author %>. </p>
- <p> Le contenu est le suivant: <%= affichage_du_potin.content %>  </p>
- <p>Si tu veux revenir à la page d'accueil, <a href="/">clique ici </a>   </p>
+ <p> <h1> Vous êtes sur la page du potin numéro <%= params['id'] %>.</h1> </p>
+
+ <p> <span class="Souligné"> L'auteur est: </span> <%= affichage_du_potin.author %>. </p>	<!-- Affiche l'auteur du potin en fonction de l'id du gossip (cf controller.rb) -->
+ <p> <span class ="Souligné">Le contenu est le suivant: </span><%= affichage_du_potin.content %>  </p> <!-- Même chose pour l'affichage du contenu du gossip -->
+
+ <p>Si tu veux revenir à la page d'accueil, <a href="/">clique ici </a>   </p> 
+ <p> Si tu veux éditer ton potin, <a href="/gossips/id/edit/"> clique ici.</a>    </p>
+
 </body>
 
 </html>

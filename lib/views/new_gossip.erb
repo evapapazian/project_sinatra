@@ -1,9 +1,16 @@
 <html>
   <head>
-    <title>Créer un potin</title>
+    <style type="text/css">
+      h1 {color: maroon }
+      ></style>
+
+
+
+  <title>Créer un potin</title>
+  
   </head>
   <body>
-    <h1>Crée un potin !</h1>
+    <h1> Quelque chose à nous confier ? Promis, ça ne sortira pas d'ici...</h1>
     <p>Balance ton potin via le formulaire ci-dessous</p>
     <form action='/gossips/new/' method='POST'>                   <!-- Ici l'action part de l'url gossips/new et lance une méthode post aka le contenu d'un formulaire -->
       Saisis ici ton nom :  <input type='text' name='gossip_author'/><br/> <!-- Ici on a un équivalent gets.chomp, l'utilisateur rentre son nom -->

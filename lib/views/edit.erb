@@ -1,0 +1,21 @@
+<html>
+  <head>
+      <style type="text/css">
+      h1 {color: maroon }
+      ></style>
+
+    <title>Edite ton potin!</title>
+  </head>
+
+
+  <body>
+    <h1>Nous sommes bien d'accord, ce potin ne cassait pas des briques. Et si on le modifiait ?</h1>
+
+    <p>Tu peux le modifier ici (on compte sur toi pour le rendre méga stylé):</p>
+    <form action='/gossips/id/edit' method='POST'>                
+      Nouveau nom :  <input type='text' name='new_gossip_author'/><br/> 
+      Nouveau potin : <input type='text' name='new_gossip_content'/><br/> 
+      <input type='submit'/> 
+    </form>
+  </body>
+</html>

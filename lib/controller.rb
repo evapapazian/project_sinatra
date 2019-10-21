@@ -17,20 +17,22 @@ post '/gossips/new/' do
   redirect '/'
 end
 
+#Le params enregistre tous les auteurs et le contenu sous forme d'un hash.
 
 get '/gossips/:id/' do
 
 erb :show, locals: {affichage_du_potin: Gossip.all[params[:id].to_i], id: params[:id].to_i}
-#on définit que id=params[:id].to_i, pour pas avoir besoin de le répéter à chaque fois s
-
-#Méthode de Léa :
-#erb :show, locals: {affichage_du_potin: Gossip.all.find(params['id'].to_i)}
-#<p> Voici le contenu du potin : <%= Gossip.all[params['id'].to_i].content %></p> (dans le show.erb)
-
+#on définit que id=params[:id].to_i, pour ne pas avoir besoin de le répéter à chaque fois 
 
 
 end 
 
+get '/gossips/id/edit/' do
+	erb :edit
+	
+	
 
-  #run! if app_file == $0	==> ce n'est plus nécessaire car on l'a dans le config.ru
 end
+
+
+end 

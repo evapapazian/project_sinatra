@@ -3,30 +3,29 @@
 
 <html>
   <head>
-    <title>The Gossip Project</title>
+
+  <style type="text/css">
+  h1 {color: maroon }
+  ></style>
+
+
+  <title>The Gossip Project</title>
   </head>
   <body>
-    <h1>Mon super site de gossip, depuis le dossier views !</h1>	
 
-    <a href="/gossips/new/"> As-tu un potin à raconter ? Clique ici pour nous le dévoiler ! </a>
+    <h1>Bravo, tu as trouvé la mine d'or: les potins de THP!</h1>	
 
-   <p>
+    <a href="/gossips/new/"> As-tu un potin à raconter ? Clique ici pour nous le dévoiler ! </a>  <!-- Lien vers la page new_gossip -->
 
-         <% gossips.each_with_index do |gossip, index| %> <br/>
-       
+    <p>
 
+         <% gossips.each_with_index do |gossip, index| %> <br/>     <!-- On lance la liste des auteurs et contenus de chaque gossip. -->
+         <a href="http://localhost:4567/gossips/<%= index  %>/"> Potin n°  <%=  "#{index}"  %> </a> <br/>   <!-- On met un lien pour rejoindre directement la page de chaque potin -->
+         Auteur:   <%= gossip.author %><br/>
+         Contenu:  <%= gossip.content %> <br/>
+        <% end %>
 
-        <a href="http://localhost:4567/gossips/<%= index  %>/"> Potin n°  <%=  "#{index}"  %> </a> <br/>
-
-        Auteur:   <%= gossip.author %><br/>
-        Contenu:  <%= gossip.content %> <br/>
-
-
-
-    
-      <% end %>
-
-</p>
+    </p>
 
 
   </body>
