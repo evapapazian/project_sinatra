@@ -1,0 +1,33 @@
+
+<!-- Va contenir le code html de la view index. Un fichier erb est un HTML qui peut contenir du ruby -->
+
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Mon super site de gossip, depuis le dossier views !</h1>	
+
+    <a href="/gossips/new/"> As-tu un potin à raconter ? Clique ici pour nous le dévoiler ! </a>
+
+   <p>
+
+         <% gossips.each_with_index do |gossip, index| %> <br/>
+       
+
+
+        <a href="http://localhost:4567/gossips/<%= index  %>/"> Potin n°  <%=  "#{index}"  %> </a> <br/>
+
+        Auteur:   <%= gossip.author %><br/>
+        Contenu:  <%= gossip.content %> <br/>
+
+
+
+    
+      <% end %>
+
+</p>
+
+
+  </body>
+</html>
